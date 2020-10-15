@@ -1,0 +1,35 @@
+.cat-img{
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.modal-img{
+    height: 96vh;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.git-link{
+    filter: opacity(75%);
+}
+.git-link:hover{
+    filter: opacity(100%);
+}
+
+#search-options-container{
+    max-height: 500px;
+    overflow: auto;
+}
+
+.main-header{
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    margin-top: -5px;
+}
+
+.search-button{
+    margin-right: 1rem;
+}
