@@ -12,11 +12,13 @@
     object-fit: cover;
 }
 
-.git-link{
-    filter: opacity(75%);
+.git-link .git-icon{
+    display: block;
+    margin:auto;
+    fill:rgba(255, 255, 255, 0.75);
 }
-.git-link:hover{
-    filter: opacity(100%);
+.git-link .git-icon:hover{
+    fill:rgb(255, 255, 255);
 }
 
 #search-options-container{
@@ -32,4 +34,8 @@
 
 .search-button{
     margin-right: 1rem;
+}
+
+.main-section{
+    min-height: calc( 100vh - 154px - 32px);
 }
