@@ -1,3 +1,8 @@
+.search-button{
+    margin-top: 5px;
+    width: 190px;
+}
+
 .cat-img{
     height: 400px;
     object-fit: cover;
@@ -8,13 +13,21 @@
 
 .modal-img{
     height: 96vh;
+    max-width: 95vw;
+    margin: 0;
     border-radius: 1rem;
     object-fit: cover;
 }
 
+@media (max-width: 800px){
+    .modal-img{
+        height: 70vh;
+    }
+}
+
 .git-link .git-icon{
     display: block;
-    margin:auto;
+    margin: auto;
     fill:rgba(255, 255, 255, 0.75);
 }
 .git-link .git-icon:hover{
