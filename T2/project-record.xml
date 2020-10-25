@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project-record SYSTEM "./project-record.dtd">
+<project-record>
+    <project-data>
+        <keyname>DAW-TPC2-2020</keyname>
+        <title>Desenvolvimento de um DTD para relatórios DAW</title>
+        <subtitle>Relatório do trabalho de casa 2 da cadeira DAW 2020</subtitle>
+        <begin-date>Outubro 2020</begin-date>
+        <end-date>Outubro 2020</end-date>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminhp.pt</email>
+            <url href="http://www3.di.uminho.pt/~jcr/">HomePage</url>
+        </supervisor>
+    </project-data>
+    <workteam>
+        <team-member>
+            <name>Ricardo Silva</name>
+            <number>84123</number>
+            <email>a84123@alunos.uminho.pt</email>
+            <url href="https://github.com/ricardoSlv">Github</url>
+        </team-member>
+    </workteam>
+    <main-content>
+        <abstract>
+            <p>O trabalho de casa 2 correspondia à entrega de um ficheiro <url href="https://www.w3schools.com/xml/xml_dtd_intro.asp">Dtd</url> de acordo com as especificações fornecidas, e de um ficheiro xml como relatório que cumpra com esse mesmo Dtd. </p>
+            <p>O documento está dividido em 4 partes: <b>project-data</b>,<b>workteam</b>,<b>main-content</b>,<b>deliverables</b></p>
+            <p><b>Project-data</b> contém informações gerais sobre o projeto/tpc: Nome de código, titulo, subtitulo, data de inicio, data de fim e supervisor(<i>nome, email, pagina web</i>) </p>
+            <p><b>WorkTeam</b> corresponde à descrição dos membros do grupo(<i>nome, numero, email, pagina web</i>) </p>
+            <p><b>Main-content</b> corresponde ao corpo do documento, de momento apenas contem o abstract </p>
+            <p><b>Deliverables</b> contém urls para os ficheros que compõem o projeto, neste caso, os ficheiros <b>project-record.dtd</b> e <b>project-record.xml</b> </p>
+            <p> Este relatório foi validado e está de acordo com o Dtd definido.</p>
+        </abstract>
+    </main-content>
+    <deliverables>
+        <url href="https://github.com/ricardoSlv/DAW2020/blob/master/T2/project-record.dtd">project-record.dtd</url>
+        <url href="https://github.com/ricardoSlv/DAW2020/blob/master/T2/project-record.xml">project-record.xml</url>
+    </deliverables>
+</project-record>
