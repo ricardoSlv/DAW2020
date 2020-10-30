@@ -6,4 +6,4 @@ Web Aplication Development Homework
 https://daw-tpc1-cat-gallery.netlify.app/
 
 # T3
-https://daw-tp3-arqueo-record.netlify.app/index.html
+https://daw-tpc3-arqueo-record.netlify.app/index.html
