@@ -15,7 +15,7 @@
             </head>
             <body>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
-                    <a class="navbar-brand" href="#">Arquivo Arqueológico</a>
+                    <a class="navbar-brand" href="">Arquivo Arqueológico</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -25,7 +25,7 @@
                                 <a class="nav-link d-flex align-items-center mb-0" href="index.html"><ion-icon name="home-outline" class="px-1"></ion-icon>  Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center mb-0" href="index.html"> <ion-icon name="logo-github" class="px-1"></ion-icon> Github <span class="sr-only">(current)</span></a>
+                                <a class="nav-link d-flex align-items-center mb-0" href="https://github.com/ricardoSlv/DAW2020/tree/master/T3"> <ion-icon name="logo-github" class="px-1"></ion-icon> Github <span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                         <span class="navbar-text h5 mb-0">
@@ -83,7 +83,10 @@
                                         <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center mb-0" href="index.html"> <ion-icon name="logo-github" class="px-1"></ion-icon> Github <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link d-flex align-items-center mb-0" href="https://github.com/ricardoSlv/DAW2020/tree/master/T3"> 
+                                        <ion-icon name="logo-github" class="px-1"></ion-icon> 
+                                        Github 
+                                        <span class="sr-only">(current)</span></a>
                                 </li>
                             </ul>
                             <span class="navbar-text h5 mb-0">
