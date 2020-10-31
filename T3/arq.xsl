@@ -36,7 +36,7 @@
                 
                 <h1 class="display-3 my-5 text-center"> 
                     <ion-icon name="bonfire-outline" class="text-warning"></ion-icon> 
-                    Registos Aqueológicos em Portugal 
+                    Registos Arqueológicos de Portugal 
                     <ion-icon name="bonfire-outline" class="text-warning"></ion-icon>
                 </h1>
                 
