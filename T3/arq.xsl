@@ -8,10 +8,12 @@
         <html>
             <head>
                 <title>Arquivo Aqueológico</title>
+                <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></link>
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-                <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+                <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
             </head>
             <body>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
@@ -36,7 +38,7 @@
                 
                 <h1 class="display-3 my-5 text-center"> 
                     <ion-icon name="bonfire-outline" class="text-warning"></ion-icon> 
-                    Registos Arqueológicos de Portugal 
+                    Registos Aqueológicos em Portugal 
                     <ion-icon name="bonfire-outline" class="text-warning"></ion-icon>
                 </h1>
                 
@@ -63,10 +65,12 @@
             <html>
                 <head>
                     <title>Registo Arquelógico</title>
+                    <link rel="shortcut icon" type="image/x-icon" href="./../favicon.ico" />
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></link>
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-                    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+                    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
                 </head>
                 <body>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
@@ -113,12 +117,12 @@
                                 <div class="card-body ">
                                     <h2 class="card-title"><xsl:value-of select="IDENTI"/></h2> 
                                     <p><b>Descrição:</b><xsl:value-of select="DESCRI"/></p>
-                                    <p><b>Crono:</b><xsl:value-of select="CRONO"/></p>
-                                    <p><b>Lugar:</b><xsl:value-of select="LUGAR"/></p>
-                                    <p><b>Freguesia:</b><xsl:value-of select="FREGUE"/></p>
-                                    <p><b>Conselho:</b><xsl:value-of select="CONCEL"/></p>
-                                    <p><b>Desarq:</b> <xsl:value-of select="DESARQ"/></p>
-                                    <p><b>Biblio:</b></p>
+                                    <p><b>Crono: </b><xsl:value-of select="CRONO"/></p>
+                                    <p><b>Lugar: </b><xsl:value-of select="LUGAR"/></p>
+                                    <p><b>Freguesia: </b><xsl:value-of select="FREGUE"/></p>
+                                    <p><b>Conselho: </b><xsl:value-of select="CONCEL"/></p>
+                                    <p><b>Descrição Arqueológica: </b> <xsl:value-of select="DESARQ"/></p>
+                                    <p><b>Bibliografia:</b></p>
                                     <ul>
                                         <xsl:apply-templates select="./BIBLIO">
                                             <xsl:sort select="."></xsl:sort>
