@@ -35,7 +35,8 @@ console.info('Server listening on '+ PORT)
 function handleArq(res,id){
     fs.readFile('./website/arq/' + parseInt(id) + '.html', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write(data || page404)
+        const pageAnswer = data || page404
+        res.write(pageAnswer)
         res.end()
     })
 }
@@ -43,7 +44,6 @@ function handleArq(res,id){
 function handleHome(res){
     fs.readFile('./website/index.html', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write(data || page404)
         res.end()
     })
 }
@@ -51,7 +51,7 @@ function handleHome(res){
 function handleFavicon(res){
     fs.readFile('./website/favicon.ico', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write(data || page404)
+        res.write(pageAnswer)
         res.end()
     })
 }

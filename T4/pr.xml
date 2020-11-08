@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "./pr.dtd">
+<pr>
+    <meta>
+        <key>DAW-TPC4-2020</key>
+        <title>Criação de um servidor http para servir os ficheiros gerados pelo xsl do TPC anterior</title>
+        <bdate>Outubro 2020</bdate>
+        <edate>Outubro 2020</edate>
+        <supervisor url="http://www3.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84123">
+            <name>Ricardo Silva</name>
+            <email>a84123@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O trabalho de casa 4 correspondia à criação de um servidor <link url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Http</link> em <link url="https://nodejs.org/en/about/">NodeJS</link> para servir os ficherios gerados pelo tpc anterior</p>
+        <p>Foram necessárias algumas alterações ao ficherio XSL do TPC3 para que os url apontem para os endpoints do servidor ao invés de ficherios html especificos</p>
+        <p>O servidor responde a 3 tipos de requests GET: "/", "/favicon.ico", "/arq/"</p>
+        <p>O primeiro endpoint serve a pagina Home</p>
+        <p>O segundo é usado para disponibilizar um icon para a página</p>
+        <p>O ultimo serve as páginas dos regisots arqueológicos dependendo do número requisitado, ou uma página 404 no caso do anterior não existir</p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T4/server.js">Servidor</link>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T4/server.js">Arq.xsl, Arq.xml, e páginas geradas</link>
+    </deliverables>
+</pr>
