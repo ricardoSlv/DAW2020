@@ -1,45 +1,26 @@
-const http = require("http")
-const axios = require("axios").default
+import { createServer } from "http"
 
-http.createServer((req, res) => {
-    console.log(req.method,' ',req.url)
-    if (req.method === 'GET') {
-        const reqFields = req.url.split('/')
-        if (req.url == '/') {
-            res.writeHead({ 'Content-Type': 'text.html' })
-            res.write(`<h2>Escola de musica</h2>`)
-            res.write(`<ul>`)
-            res.write(`<li><a href="/alunos">Lista de Alunos</a></li>`)
-            res.write(`<li><a href="/instrumentos">Lista de Instrumentos</a></li>`)
-            res.write(`<li><a href="/cursos">Lista de Cursos</a></li>`)
-            res.write(`</ul>`)
-            res.end()
-        }
-        else if(req.url==='/alunos'){
-            axios.get('http://localhost:3001/alunos')
-            .then(resp=>{
-                aluno=resp.data
-                res.write(`<ul>`)
-                alunos.forEach(a => {
-                    res.writeHead({ 'Context-Type': 'text.html' })
-                    res.write(`<li>${a.id} ${a.nome}</li>`)
-                });
-                res.write(`</ul>`)
-                res.write('<address>[<a href="/">Home</a>]</address>')
-            }).catch(
-                err=>console.error('Erro na obtenção da lista de alunos '+err)
-            )
-        }
-        else{
-            res.writeHead({ 'Context-Type': 'text.html' })
-            res.write(`<p>Pedido não supporttado: ${req.method}<\\p>`)
-            res.end() 
-        }
-    }
-    else {
-        res.writeHead({ 'Context-Type': 'text.html' })
-        res.write(`<p>Pedido não supporttado: ${req.method}<\\p>`)
-        res.end()
-    }
+import {handleFavicon,handleHome,handle404,handle405,handleAlunos,handleInstrumentos,handleCursos} from "./handlers.js"
+
+createServer((req, res) => {
+    
+    //const reqFields = req.url.split('/')
+    console.log(req.method, req.url)
+
+    if (req.method !== 'GET') 
+        handle405(res)
+    else if(req.url==='/favicon.ico')
+        handleFavicon(res)
+    else if (req.url === '/') 
+        handleHome(res)
+    else if (req.url === '/alunos') 
+        handleAlunos(res)
+    else if (req.url === '/cursos') 
+       handleCursos(res)
+    else if (req.url === '/instrumentos') 
+        handleInstrumentos(res)
+    else 
+        handle404(res)
+
 }).listen(4000)
 

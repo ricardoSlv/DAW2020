@@ -8,7 +8,11 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7"
   }
 }
