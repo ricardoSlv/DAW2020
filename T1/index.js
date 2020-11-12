@@ -33,7 +33,7 @@ async function fetchBreeds(){
     
     console.log(breedData)
 
-    let div = document.getElementById("search-options-container");
+    let div = document.getElementById("search-options-container")
     const filterinput = div.firstElementChild 
     div.innerHTML=""
     div.appendChild(filterinput)
@@ -44,7 +44,7 @@ async function fetchBreeds(){
         button.innerHTML = b.name
         button.onclick = ()=>{
             updateCats(b)
-            document.getElementById("search-input").value="";
+            document.getElementById("search-input").value=""
             searchFilter()
         }
         div.appendChild(button)

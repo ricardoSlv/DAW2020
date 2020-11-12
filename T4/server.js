@@ -51,7 +51,7 @@ function handleHome(res){
 function handleFavicon(res){
     fs.readFile('./website/favicon.ico', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write(pageAnswer)
+        res.write(data)
         res.end()
     })
 }
