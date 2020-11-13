@@ -3,10 +3,10 @@ import axios from "axios"
 
 import {
     renderHomePage,
-    render404Page, render405Page,
-    renderAlunos, renderAluno,
-    renderInstrumentos, renderInstrumento,
-    renderCursos, renderCurso
+    renderPage404, renderPage405,
+    renderPageAlunos, renderPageAluno,
+    renderPageInstrumentos, renderPageInstrumento,
+    renderPageCursos, renderPageCurso
 } from "./pageRender.js"
 
 const db_server = 'http://localhost:3000' || process.env.DB_SERVER
@@ -25,12 +25,14 @@ export function handleHome(res) {
     res.end()
 }
 
-export function handleAlunos(res) {
-    axios.get(`${db_server}/alunos`)
+export function handleAlunos(res, query, queryParams) {
+    axios.get(`${db_server}/alunos${query}`)
         .then(resp => {
             const alunos = resp.data
+            const totalPages = Math.floor(parseInt(resp.headers['x-total-count'])/10)
+            const page = parseInt(queryParams._page)
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderAlunos(alunos))
+            res.write(renderPageAlunos(alunos, page, totalPages))
             res.end();
         }).catch(
             err => {
@@ -45,7 +47,7 @@ export function handleAluno(res, alunoId) {
         .then(resp => {
             const aluno = resp.data
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderAluno(aluno))
+            res.write(renderPageAluno(aluno))
             res.end();
         }).catch(
             err => {
@@ -55,12 +57,14 @@ export function handleAluno(res, alunoId) {
         )
 }
 
-export function handleInstrumentos(res) {
-    axios.get(`${db_server}/instrumentos`)
+export function handleInstrumentos(res,query,queryParams) {
+    axios.get(`${db_server}/instrumentos${query}`,)
         .then(resp => {
             const instrumentos = resp.data
+            const totalPages = Math.floor(parseInt(resp.headers['x-total-count'])/10)
+            const page = parseInt(queryParams._page) 
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderInstrumentos(instrumentos))
+            res.write(renderPageInstrumentos(instrumentos,page,totalPages))
             res.end();
         }).catch(
             err => {
@@ -75,7 +79,7 @@ export function handleInstrumento(res, instrumentoId) {
         .then(resp => {
             const instrumento = resp.data
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderInstrumento(instrumento))
+            res.write(renderPageInstrumento(instrumento))
             res.end();
         }).catch(
             err => {
@@ -85,16 +89,18 @@ export function handleInstrumento(res, instrumentoId) {
         )
 }
 
-export function handleCursos(res) {
-    axios.get(`${db_server}/cursos`)
+export function handleCursos(res,query,queryParams) {
+    axios.get(`${db_server}/cursos${query}`)
         .then(resp => {
             const cursos = resp.data
+            const totalPages = Math.floor(parseInt(resp.headers['x-total-count'])/10)
+            const page = parseInt(queryParams._page)
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderCursos(cursos))
+            res.write(renderPageCursos(cursos,page,totalPages))
             res.end();
         }).catch(
             err => {
-                console.error('Erro na obtenção da lista de alunos ' + err)
+                console.error('Erro na obtenção da lista de cursos ' + err)
                 handle404(res)
             }
         )
@@ -105,7 +111,7 @@ export function handleCurso(res, cursoId) {
         .then(resp => {
             const curso = resp.data
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-            res.write(renderCurso(curso))
+            res.write(renderPageCurso(curso))
             res.end();
         }).catch(
             err => {
@@ -117,12 +123,12 @@ export function handleCurso(res, cursoId) {
 
 export function handle404(res) {
     res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' })
-    res.write(render404Page())
+    res.write(renderPage404())
     res.end()
 }
 
 export function handle405(res) {
     res.writeHead(405, { 'Content-Type': 'text/html; charset=utf-8' })
-    res.write(render405Page())
+    res.write(renderPage405())
     res.end()
 }
