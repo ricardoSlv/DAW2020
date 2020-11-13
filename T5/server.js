@@ -10,6 +10,8 @@ import {
     handleCursos,handleCurso
 } from "./handlers.js"
 
+const port = process.env.PORT || 4000
+
 createServer((req, res) => {
     
     const reqFields = url.parse(req.url,true).pathname.split('/').slice(1)
@@ -54,5 +56,5 @@ createServer((req, res) => {
         break
     }
 
-}).listen(4000)
+}).listen(port)
 
