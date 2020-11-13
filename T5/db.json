@@ -1,0 +1,484 @@
+{
+  "alunos": [
+    {
+      "id": "A1510",
+      "nome": "ADEMAR FONTES DE MAGALHAES GONCALVES",
+      "dataNasc": "1999-4-19",
+      "curso": "CB8",
+      "anoCurso": "5",
+      "instrumento": "Guitarra"
+    },
+    {
+      "id": "A32597",
+      "nome": "ADERITO NELSON MIRANDA DE OLIVEIRA",
+      "dataNasc": "2004-9-5",
+      "curso": "CS1920",
+      "anoCurso": "7"
+    },
+    {
+      "id": "A36539",
+      "nome": "ADMILSON CESAR ANDRADE RODRIGUES",
+      "dataNasc": "2002-10-26",
+      "curso": "CS21",
+      "anoCurso": "8",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A38165",
+      "nome": "AFONSO DELERUE ARRIAGA",
+      "dataNasc": "1996-2-25",
+      "curso": "CB5",
+      "anoCurso": "3",
+      "instrumento": "Fagote"
+    },
+    {
+      "id": "A38176",
+      "nome": "AGOSTINHO MANUEL ALVES DA SILVA",
+      "dataNasc": "2000-7-18",
+      "curso": "CB5",
+      "anoCurso": "5",
+      "instrumento": "Fagote"
+    },
+    {
+      "id": "A33145",
+      "nome": "BRUNO MIGUEL FLORES DIAMANTINO",
+      "dataNasc": "1997-6-20",
+      "curso": "CB21",
+      "anoCurso": "1",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A33146",
+      "nome": "BRUNO MIGUEL MAGALHAES AZEVEDO",
+      "dataNasc": "2003-11-15",
+      "curso": "CS18",
+      "anoCurso": "6",
+      "instrumento": "Tuba"
+    },
+    {
+      "id": "A30219",
+      "nome": "MANUEL FERNANDO SOTO MAIOR FRANQUEIRA",
+      "dataNasc": "2001-3-16",
+      "curso": "CB4",
+      "anoCurso": "3",
+      "instrumento": "Eufónio"
+    },
+    {
+      "id": "A35348",
+      "nome": "MANUEL JOSE GOMES MEIRELES",
+      "dataNasc": "2002-2-24",
+      "curso": "CS8",
+      "anoCurso": "7",
+      "instrumento": "Guitarra"
+    },
+    {
+      "id": "A27637",
+      "nome": "MANUEL JOSE TORRES SOUSA DA CUNHA",
+      "dataNasc": "1999-12-22",
+      "curso": "CB18",
+      "anoCurso": "4",
+      "instrumento": "Tuba"
+    },
+    {
+      "id": "A29004",
+      "nome": "MARANGAZE JOAQUIM MUNHEPE MULHANGA",
+      "dataNasc": "1999-4-22",
+      "curso": "CB1",
+      "anoCurso": "2",
+      "instrumento": "Clarinete"
+    },
+    {
+      "id": "A35349",
+      "nome": "MARCIA MARLENE DE ALMEIDA MARTINS",
+      "dataNasc": "1997-1-26",
+      "curso": "CB6",
+      "anoCurso": "2",
+      "instrumento": "Flauta"
+    },
+    {
+      "id": "A21711",
+      "nome": "PEDRO DAVID ALVES MARTINHO",
+      "dataNasc": "1999-9-27",
+      "curso": "CB21",
+      "anoCurso": "4",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A32652",
+      "nome": "PEDRO DUARTE CARDOSO LOPES",
+      "dataNasc": "2005-9-18",
+      "curso": "CS15",
+      "anoCurso": "7",
+      "instrumento": "Trombone"
+    },
+    {
+      "id": "A36969",
+      "nome": "PEDRO EMANUEL FERNANDES LOPES",
+      "dataNasc": "2005-6-16",
+      "curso": "CS17",
+      "anoCurso": "8",
+      "instrumento": "Trompete"
+    },
+    {
+      "id": "A33213",
+      "nome": "PEDRO GUIMARAES DE FREITAS",
+      "dataNasc": "2005-4-14",
+      "curso": "CS6",
+      "anoCurso": "6",
+      "instrumento": "Flauta"
+    },
+    {
+      "id": "A30241",
+      "nome": "PEDRO HENRIQUE GONCALVES GERAZ RODRIGUES",
+      "dataNasc": "1999-6-1",
+      "curso": "CB6",
+      "anoCurso": "3",
+      "instrumento": "Flauta"
+    },
+    {
+      "id": "A38159",
+      "nome": "PEDRO MIGUEL AZEVEDO DE OLIVEIRA",
+      "dataNasc": "2005-6-21",
+      "curso": "CS1",
+      "anoCurso": "8",
+      "instrumento": "Clarinete"
+    },
+    {
+      "id": "A35363",
+      "nome": "PEDRO MIGUEL DA SILVA ARAUJO",
+      "dataNasc": "1998-2-14",
+      "curso": "CB11",
+      "anoCurso": "1",
+      "instrumento": "Orgão"
+    },
+
+    {
+      "id": "A35376",
+      "nome": "TELMA DE FATIMA PIRES DE SA",
+      "dataNasc": "1997-3-23",
+      "curso": "CB21",
+      "anoCurso": "2",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A38131",
+      "nome": "TIAGO DANIEL CERQUEIRA BOTELHO DA SILVA",
+      "dataNasc": "2004-4-15",
+      "curso": "CS21",
+      "anoCurso": "8",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A33240",
+      "nome": "TIAGO JORGE GOMES DA SILVA ARAUJO",
+      "dataNasc": "1997-4-9",
+      "curso": "CB21",
+      "anoCurso": "3",
+      "instrumento": "Viola de Arco"
+    },
+    {
+      "id": "A38144",
+      "nome": "TIAGO LEANDRO DE CASTRO RIBEIRO",
+      "dataNasc": "1999-12-24",
+      "curso": "CB6",
+      "anoCurso": "4",
+      "instrumento": "Flauta"
+    },
+    {
+      "id": "A39671",
+      "nome": "VITOR MANUEL PINTO LOPES",
+      "dataNasc": "1999-8-9",
+      "curso": "CB13",
+      "anoCurso": "1",
+      "instrumento": "Piano"
+    }
+  ],
+  "cursos": [
+    {
+      "id": "CB1",
+      "designacao": "Curso Básico de Clarinete",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I1",
+        "#text": "Clarinete"
+      }
+    },
+    {
+      "id": "CS23",
+      "designacao": "Curso Supletivo de Clarinete",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I1",
+        "#text": "Clarinete"
+      }
+    },
+    {
+      "id": "CB2",
+      "designacao": "Curso Básico de Contrabaixo",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I2",
+        "#text": "Contrabaixo"
+      }
+    },
+    {
+      "id": "CB3",
+      "designacao": "Curso Básico de Corne Inglês",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I3",
+        "#text": "Corne Inglês"
+      }
+    },
+    {
+      "id": "CS31",
+      "designacao": "Curso Supletivo de Harpa",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I9",
+        "#text": "Harpa"
+      }
+    },
+    {
+      "id": "CB10",
+      "designacao": "Curso Básico de Oboé",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I10",
+        "#text": "Oboé"
+      }
+    },
+    {
+      "id": "CS32",
+      "designacao": "Curso Supletivo de Oboé",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I10",
+        "#text": "Oboé"
+      }
+    },
+    {
+      "id": "CB11",
+      "designacao": "Curso Básico de Orgão",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I11",
+        "#text": "Orgão"
+      }
+    },
+    {
+      "id": "CB17",
+      "designacao": "Curso Básico de Trompete",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I17",
+        "#text": "Trompete"
+      }
+    },
+    {
+      "id": "CS39",
+      "designacao": "Curso Supletivo de Trompete",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I17",
+        "#text": "Trompete"
+      }
+    },
+    {
+      "id": "CB18",
+      "designacao": "Curso Básico de Tuba",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I18",
+        "#text": "Tuba"
+      }
+    },
+    {
+      "id": "CS40",
+      "designacao": "Curso Supletivo de Tuba",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I18",
+        "#text": "Tuba"
+      }
+    },
+    {
+      "id": "CB19",
+      "designacao": "Curso Básico de Violoncelo",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I19",
+        "#text": "Violoncelo"
+      }
+    },
+    {
+      "id": "CS41",
+      "designacao": "Curso Supletivo de Violoncelo",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I19",
+        "#text": "Violoncelo"
+      }
+    },
+    {
+      "id": "CB20",
+      "designacao": "Curso Básico de Violino",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I20",
+        "#text": "Violino"
+      }
+    },
+    {
+      "id": "CS42",
+      "designacao": "Curso Supletivo de Violino",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I20",
+        "#text": "Violino"
+      }
+    },
+    {
+      "id": "CB21",
+      "designacao": "Curso Básico de Viola de Arco",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I21",
+        "#text": "Viola de Arco"
+      }
+    },
+    {
+      "id": "CS43",
+      "designacao": "Curso Supletivo de Viola de Arco",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I21",
+        "#text": "Viola de Arco"
+      }
+    },
+    {
+      "id": "CB22",
+      "designacao": "Curso Básico de Bandolim",
+      "duracao": "5",
+      "instrumento": {
+        "id": "I22",
+        "#text": "Bandolim"
+      }
+    },
+    {
+      "id": "CS44",
+      "designacao": "Curso Supletivo de Bandolim",
+      "duracao": "3",
+      "instrumento": {
+        "id": "I22",
+        "#text": "Bandolim"
+      }
+    }
+  ],
+  "instrumentos": [
+    {
+      "id": "I1",
+      "#text": "Clarinete2"
+    },
+    {
+      "id": "I2",
+      "#text": "Contrabaixo"
+    },
+    {
+      "id": "I3",
+      "#text": "Corne Inglês"
+    },
+    {
+      "id": "I4",
+      "#text": "Eufónio"
+    },
+    {
+      "id": "I5",
+      "#text": "Fagote"
+    },
+    {
+      "id": "I6",
+      "#text": "Flauta"
+    },
+    {
+      "id": "I7",
+      "#text": "Fliscorne"
+    },
+    {
+      "id": "I8",
+      "#text": "Guitarra"
+    },
+    {
+      "id": "I9",
+      "#text": "Harpa"
+    },
+    {
+      "id": "I10",
+      "#text": "Oboé"
+    },
+    {
+      "id": "I11",
+      "#text": "Orgão"
+    },
+    {
+      "id": "I12",
+      "#text": "Percussão"
+    },
+    {
+      "id": "I13",
+      "#text": "Piano"
+    },
+    {
+      "id": "I14",
+      "#text": "Saxofone"
+    },
+    {
+      "id": "I15",
+      "#text": "Trombone"
+    },
+    {
+      "id": "I16",
+      "#text": "Trompa"
+    },
+    {
+      "id": "I17",
+      "#text": "Trompete"
+    },
+    {
+      "id": "I18",
+      "#text": "Tuba"
+    },
+    {
+      "id": "I19",
+      "#text": "Violoncelo"
+    },
+    {
+      "id": "I20",
+      "#text": "Violino"
+    },
+    {
+      "id": "I21",
+      "#text": "Viola de Arco"
+    },
+    {
+      "id": "I22",
+      "#text": "Bandolim"
+    },
+    {
+      "id": "CA37",
+      "#text": "Catanholas Ola"
+    },
+    {
+      "id": "I77",
+      "#text": "Kazzoo"
+    },
+    {
+      "id": "I78",
+      "#text": "Kazzoo"
+    },
+    {
+      "id": "I79",
+      "#text": "Kazzoo"
+    }
+  ]
+}
