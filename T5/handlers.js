@@ -10,6 +10,7 @@ import {
 } from "./pageRender.js"
 
 const db_server = process.env.DB_SERVER || 'http://localhost:4000'
+console.log('DB server is:',db_server)
 
 export function handleFavicon(res) {
     fs.readFile('./favicon.ico', (_, data) => {
