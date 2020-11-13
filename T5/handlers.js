@@ -9,7 +9,7 @@ import {
     renderPageCursos, renderPageCurso
 } from "./pageRender.js"
 
-const db_server = 'http://localhost:4000' || process.env.DB_SERVER
+const db_server = process.env.DB_SERVER || 'http://localhost:4000'
 
 export function handleFavicon(res) {
     fs.readFile('./favicon.ico', (_, data) => {
