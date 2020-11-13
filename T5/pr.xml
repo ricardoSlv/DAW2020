@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../T4/pr.dtd">
+<pr>
+    <meta>
+        <key>DAW-TPC5-2020</key>
+        <title>Criação de um servidor http para visualizar informação sobre uma escola de música</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="http://www3.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84123">
+            <name>Ricardo Silva</name>
+            <email>a84123@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O trabalho de casa 5 correspondia à criação de um servidor <link url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Http</link> em <link url="https://nodejs.org/en/about/">NodeJS</link> para visualizar informaçao sobre uma escola de música</p>
+        <p>O servidor deve comunicar com um Json-Server para obter a informação</p>
+        <p>O servidor responde a 8 tipos de requests GET: "/", "/favicon.ico", "/alunos/", "/alunos/:aluno", "/instrumentos/", "/instrumentos/:instrumento", "/cursos/", "/cursos/:curso"</p>
+        <p>Todas as coleções são paginadas em grupos de 10</p>
+        <p>Alguns links apontam para recursos não existentes devido a inconsistências nos dados, principalmente na base de dados hosted </p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/server.js">Servidor</link>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/handlers.js">Handlers</link>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/pageRender.js">Page Renders</link>
+    </deliverables>
+</pr>
