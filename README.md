@@ -12,8 +12,8 @@ https://daw-tpc3-arqueo-record.netlify.app/index.html
 https://daw-tpc4.herokuapp.com/
 
 # T5
-https://daw-tpc5.herokuapp.com/
-Json-server being used is limited to 10kb \
+https://daw-tpc5.herokuapp.com/ \
+Json-server being used is limited to 10kb \ \
 http://localhost:4000 is used if no process.env.DB_SERVER is specified \
 https://github.com/ricardoSlv/DAW-TPC5-DB \
 https://my-json-server.typicode.com/ricardoslv/DAW-TPC5-DB/ \
