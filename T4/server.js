@@ -1,14 +1,14 @@
-const http = require('http')
-const fs = require('fs')
+import { createServer } from 'http'
+import { readFile } from 'fs'
 
 let page404 
 
-fs.readFile('./website/404.html', (err, data) => {
+readFile('./website/404.html', (err, data) => {
     page404 = data
 }) 
 
 const PORT = process.env.PORT || 7500
-http.createServer((req, res) => {
+createServer((req, res) => {
 
     console.log(req.method,req.url)
 
@@ -33,7 +33,7 @@ http.createServer((req, res) => {
 console.info('Server listening on '+ PORT)
 
 function handleArq(res,id){
-    fs.readFile('./website/arq/' + parseInt(id) + '.html', (err, data) => {
+    readFile('./website/arq/' + parseInt(id) + '.html', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
         const pageAnswer = data || page404
         res.write(pageAnswer)
@@ -42,14 +42,14 @@ function handleArq(res,id){
 }
 
 function handleHome(res){
-    fs.readFile('./website/index.html', (err, data) => {
+    readFile('./website/index.html', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
         res.end()
     })
 }
 
 function handleFavicon(res){
-    fs.readFile('./website/favicon.ico', (err, data) => {
+    readFile('./website/favicon.ico', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
         res.write(data)
         res.end()
