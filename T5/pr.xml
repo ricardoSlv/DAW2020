@@ -20,10 +20,12 @@
         <p>O servidor responde a 8 tipos de requests GET: "/", "/favicon.ico", "/alunos/", "/alunos/:aluno", "/instrumentos/", "/instrumentos/:instrumento", "/cursos/", "/cursos/:curso"</p>
         <p>Todas as coleções são paginadas em grupos de 10</p>
         <p>Alguns links apontam para recursos não existentes devido a inconsistências nos dados, principalmente na base de dados hosted </p>
+        <p>Criei uma <b>Json Schema</b> para demonstrar a estrutura pretendida para o ficheiro de dados</p>
     </abstract>
     <deliverables>
         <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/server.js">Servidor</link>
         <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/handlers.js">Handlers</link>
         <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/pageRender.js">Page Renders</link>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T5/db_schema.json">Page Renders</link>
     </deliverables>
 </pr>
