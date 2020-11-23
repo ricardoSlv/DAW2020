@@ -19,7 +19,9 @@
         <p>A aplicação desenvolvida funciona sobre uma <link url="https://en.wikipedia.org/wiki/Single-page_application#:~:text=A%20single%2Dpage%20application%20(SPA,browser%20loading%20entire%20new%20pages.">Página Unica</link>, 
         a informação dinâmica da página é renderizada no lado do cliente através de manipulação do<link url="https://www.w3schools.com/js/js_htmldom.asp">DOM</link> 
         e pedidos <link url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTPS</link>
-        <p>O servidor </p>
+        <p>O servidor serve o conteùdo estático da página e simultâneamente disponibiliza os endpoints necessários para permitir criar, modificar e remover tarefas da base de dados </p>
+        <p>A aplicação permite ao utilizador criar, editar e remover tarefas através de uma interface baseada em modals e forms</p>
+        <p>A submissão dos forms para criar e modificar tarefas está sujeita a uma validação da data inserida</p>
     </abstract>
     <deliverables>
         <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T6/server.js">Servidor</link>
