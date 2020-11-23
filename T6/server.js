@@ -4,12 +4,12 @@ import url from "url";
 import axios from "axios"
 
 import {
-    handleFavicon,
     handle404, handle405,
 } from "./handlers.js"
 
 const port = process.env.PORT || 4000
 const db_server = process.env.DB_SERVER || 'http://localhost:3000'
+console.log('DB server is:',db_server)
 
 createServer((req, res) => {
 
@@ -18,10 +18,11 @@ createServer((req, res) => {
     const queryParams = url.parse(req.url, true).query
     queryParams._page = queryParams._page || 0
 
+    console.log(req.method)
     console.log(req.url)
     //console.log(req.method, reqFields, query)
 
-    if (['GET', 'POST', 'PUT'].includes(req.method) === false) {
+    if (['GET', 'POST', 'PUT','DELETE','PATCH'].includes(req.method) === false) {
         handle405(res)
         return
     }
@@ -102,6 +103,7 @@ createServer((req, res) => {
                 res.end('ok');
                 const newTask = JSON.parse(body);
                 console.log(newTask);
+
                 axios.post(`${db_server}/tasks/`,
                 JSON.stringify(newTask),{
                 headers: {
@@ -115,8 +117,92 @@ createServer((req, res) => {
                     res.writeHead(500)
                     res.end()
                 })
+            }); 
+        }
+        else{
+            res.writeHead(404)
+            res.end
+        }
+    }
+    else if (req.method === 'DELETE') {
+        if (reqFields[0] === 'tasks') {
+                axios.delete(`${db_server}/tasks/${reqFields[1]}`)
+                .then(_ => {
+                    res.writeHead(200)
+                    res.end()
+                })
+                .catch(_=>{
+                    res.writeHead(500)
+                    res.end()
+                })  
+        }
+        else{
+            res.writeHead(404)
+            res.end
+        }
+    }
+    else if (req.method === 'PUT') {
+        if (reqFields[0] === 'tasks') {
+            let body = '';
+            req.on('data', chunk => {
+                body += chunk.toString(); // convert Buffer to string
             });
-            
+            req.on('end', () => {
+                console.log(body);
+                res.end('ok');
+                const updatedTask = JSON.parse(body);
+                console.log(updatedTask);
+
+                axios.put(`${db_server}/tasks/${updatedTask.id}`,
+                JSON.stringify(updatedTask),{
+                headers: {
+                    'Content-Type': 'application/json'
+                }})
+                .then(_ => {
+                    res.writeHead(200)
+                    res.end()
+                })
+                .catch(_=>{
+                    res.writeHead(500)
+                    res.end()
+                })
+            }); 
+        }
+        else{
+            res.writeHead(404)
+            res.end
+        }
+    }
+    else if (req.method === 'PATCH') {
+        if (reqFields[0] === 'tasks') {
+            let body = '';
+            req.on('data', chunk => {
+                body += chunk.toString(); // convert Buffer to string
+            });
+            req.on('end', () => {
+                console.log(body);
+                res.end('ok');
+                const changedFields = JSON.parse(body);
+                console.log(changedFields);
+
+                axios.patch(`${db_server}/tasks/${reqFields[1]}`,
+                JSON.stringify(changedFields),{
+                headers: {
+                    'Content-Type': 'application/json'
+                }})
+                .then(_ => {
+                    res.writeHead(200)
+                    res.end()
+                })
+                .catch(_=>{
+                    res.writeHead(500)
+                    res.end()
+                })
+            }); 
+        }
+        else{
+            res.writeHead(404)
+            res.end
         }
     }
 
