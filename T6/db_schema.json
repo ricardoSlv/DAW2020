@@ -1,0 +1,147 @@
+{
+    "title": "db_music.json Schema",
+    "type": "object",
+    "required": [
+        "alunos",
+        "cursos",
+        "instrumentos"
+    ],
+    "properties": {
+        "alunos": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "examples": [
+                    {
+                        "id": "A1510",
+                        "nome": "ADEMAR FONTES DE MAGALHAES GONCALVES",
+                        "dataNasc": "1999-4-19",
+                        "curso": "CB8",
+                        "anoCurso": "5",
+                        "instrumento": "Guitarra"
+                    }
+                ],
+                "required": [
+                    "id",
+                    "nome",
+                    "dataNasc",
+                    "curso",
+                    "anoCurso",
+                    "instrumento"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "nome": {
+                        "type": "string"
+                    },
+                    "dataNasc": {
+                        "type": "string"
+                    },
+                    "curso": {
+                        "type": "string"
+                    },
+                    "anoCurso": {
+                        "type": "string"
+                    },
+                    "instrumento": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "cursos": {
+            "type": "array",
+            "examples": [
+                [
+                    {
+                        "id": "CB1",
+                        "designacao": "Curso Básico de Clarinete",
+                        "duracao": "5",
+                        "instrumento": {
+                            "id": "I1",
+                            "#text": "Clarinete"
+                        }
+                    }
+                ]
+            ],
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "designacao",
+                    "duracao",
+                    "instrumento"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "An explanation about the purpose of this instance."
+                    },
+                    "designacao": {
+                        "type": "string"
+                    },
+                    "duracao": {
+                        "type": "string"
+                    },
+                    "instrumento": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "#text"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "#text": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "instrumentos": {
+            "type": "array",
+            "examples": [
+                [
+                    {
+                        "id": "I2",
+                        "#text": "Contrabaixo"
+                    }
+                ]
+            ],
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "examples": [
+                    {
+                        "id": "I1",
+                        "#text": "Clarinete2"
+                    }
+                ],
+                "required": [
+                    "id",
+                    "#text"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "#text": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    },
+    "additionalProperties": false
+}
