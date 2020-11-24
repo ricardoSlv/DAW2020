@@ -9,7 +9,7 @@ import {
 
 const port = process.env.PORT || 4000
 const db_server = process.env.DB_SERVER || 'http://localhost:3000'
-console.log('DB server is:',db_server)
+console.log('DB server is:', db_server)
 
 createServer((req, res) => {
 
@@ -17,7 +17,7 @@ createServer((req, res) => {
 
     console.log(req.method, reqFields, req.url)
 
-    if (['GET', 'POST', 'PUT','DELETE','PATCH'].includes(req.method) === false) {
+    if (['GET', 'POST', 'PUT', 'DELETE', 'PATCH'].includes(req.method) === false) {
         handle405(res)
         return
     }
@@ -28,27 +28,35 @@ createServer((req, res) => {
                     case 'notebook.svg':
                         res.writeHead(200, { 'Content-Type': 'image/svg+xml;  charset=utf-8' })
                         fs.readFile('./static/notebook.svg', (err, html) => {
-                            err ?
-                                res.write("<p>Oh no :(</p>") :
+                            if (err)
+                                res.writeHead(500);
+                            else {
+                                res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
                                 res.write(html)
+                            }
                             res.end()
                         })
                         break
                     case 'style.css':
-                        res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' })
-                        fs.readFile('./static/style.css', (err, html) => {
-                            err ?
-                                res.write("<p>Oh no :(</p>") :
-                                res.write(html)
+                        fs.readFile('./static/style.css', (err, css) => {
+                            if (err)
+                                res.writeHead(500);
+                            else {
+                                res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
+                                res.write(css)
+                            }
                             res.end()
                         })
                         break
                     case 'index.js':
                         res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8' })
-                        fs.readFile('./static/index.js', (err, html) => {
-                            err ?
-                                res.write("<p>Oh no :(</p>") :
-                                res.write(html)
+                        fs.readFile('./static/index.js', (err, js) => {
+                            if (err)
+                                res.writeHead(500);
+                            else {
+                                res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
+                                res.write(js)
+                            }
                             res.end()
                         })
                         break
@@ -61,9 +69,12 @@ createServer((req, res) => {
             case '':
                 res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
                 fs.readFile("./static/index.html", (err, html) => {
-                    err ?
-                        res.write("<p>Oh no :(</p>") :
+                    if (err)
+                        res.writeHead(500);
+                    else {
+                        res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
                         res.write(html)
+                    }
                     res.end()
                 })
                 break
@@ -100,38 +111,39 @@ createServer((req, res) => {
                 console.log(newTask);
 
                 axios.post(`${db_server}/tasks/`,
-                JSON.stringify(newTask),{
-                headers: {
-                    'Content-Type': 'application/json'
-                }})
-                .then(_ => {
-                    res.writeHead(200)
-                    res.end()
+                    JSON.stringify(newTask), {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
-                .catch(_=>{
-                    res.writeHead(500)
-                    res.end()
-                })
-            }); 
+                    .then(_ => {
+                        res.writeHead(200)
+                        res.end()
+                    })
+                    .catch(_ => {
+                        res.writeHead(500)
+                        res.end()
+                    })
+            });
         }
-        else{
+        else {
             res.writeHead(404)
             res.end
         }
     }
     else if (req.method === 'DELETE') {
         if (reqFields[0] === 'tasks') {
-                axios.delete(`${db_server}/tasks/${reqFields[1]}`)
+            axios.delete(`${db_server}/tasks/${reqFields[1]}`)
                 .then(_ => {
                     res.writeHead(200)
                     res.end()
                 })
-                .catch(_=>{
+                .catch(_ => {
                     res.writeHead(500)
                     res.end()
-                })  
+                })
         }
-        else{
+        else {
             res.writeHead(404)
             res.end
         }
@@ -149,21 +161,22 @@ createServer((req, res) => {
                 console.log(updatedTask);
 
                 axios.put(`${db_server}/tasks/${updatedTask.id}`,
-                JSON.stringify(updatedTask),{
-                headers: {
-                    'Content-Type': 'application/json'
-                }})
-                .then(_ => {
-                    res.writeHead(200)
-                    res.end()
+                    JSON.stringify(updatedTask), {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
-                .catch(_=>{
-                    res.writeHead(500)
-                    res.end()
-                })
-            }); 
+                    .then(_ => {
+                        res.writeHead(200)
+                        res.end()
+                    })
+                    .catch(_ => {
+                        res.writeHead(500)
+                        res.end()
+                    })
+            });
         }
-        else{
+        else {
             res.writeHead(404)
             res.end
         }
@@ -181,21 +194,22 @@ createServer((req, res) => {
                 console.log(changedFields);
 
                 axios.patch(`${db_server}/tasks/${reqFields[1]}`,
-                JSON.stringify(changedFields),{
-                headers: {
-                    'Content-Type': 'application/json'
-                }})
-                .then(_ => {
-                    res.writeHead(200)
-                    res.end()
+                    JSON.stringify(changedFields), {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
-                .catch(_=>{
-                    res.writeHead(500)
-                    res.end()
-                })
-            }); 
+                    .then(_ => {
+                        res.writeHead(200)
+                        res.end()
+                    })
+                    .catch(_ => {
+                        res.writeHead(500)
+                        res.end()
+                    })
+            });
         }
-        else{
+        else {
             res.writeHead(404)
             res.end
         }
