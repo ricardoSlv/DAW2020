@@ -14,8 +14,16 @@ https://daw-tpc4.herokuapp.com/
 # T5
 https://daw-tpc5.herokuapp.com/ 
 
-Json-server being used is limited to 10kb \
-http://localhost:4000 is used if no process.env.DB_SERVER is specified \
+Json-server usado está limitado 10kb \
+http://localhost:4000 é usado se process.env.DB_SERVER não for especificado \
 https://github.com/ricardoSlv/DAW-TPC5-DB \
 https://my-json-server.typicode.com/ricardoslv/DAW-TPC5-DB/
+
+# T6
+https://daw-tpc5.herokuapp.com/ 
+
+Json-server usado sofre as limitações do anterior. \
+Nesta versão é visivel também que os posts/puts/patches são falsos (O json-server responde ok mas não guarda as alterações) e que este rejeita deletes. \
+O webserver funciona normalmente se for fornecido um json-server não limitado
+
 
