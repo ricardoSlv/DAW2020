@@ -26,12 +26,11 @@ createServer((req, res) => {
             case 'static':
                 switch (reqFields[1]) {
                     case 'notebook.svg':
-                        res.writeHead(200, { 'Content-Type': 'image/svg+xml;  charset=utf-8' })
                         fs.readFile('./static/notebook.svg', (err, html) => {
                             if (err)
-                                res.writeHead(500);
+                            res.writeHead(500);
                             else {
-                                res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
+                                res.writeHead(200, { 'Content-Type': 'image/svg+xml;  charset=utf-8' })
                                 res.write(html)
                             }
                             res.end()
@@ -49,12 +48,11 @@ createServer((req, res) => {
                         })
                         break
                     case 'index.js':
-                        res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8' })
                         fs.readFile('./static/index.js', (err, js) => {
                             if (err)
-                                res.writeHead(500);
+                            res.writeHead(500);
                             else {
-                                res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
+                                res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8' })
                                 res.write(js)
                             }
                             res.end()
@@ -67,12 +65,11 @@ createServer((req, res) => {
 
                 break
             case '':
-                res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
                 fs.readFile("./static/index.html", (err, html) => {
                     if (err)
-                        res.writeHead(500);
+                    res.writeHead(500);
                     else {
-                        res.writeHead(200, { 'Content-Type': 'text/css; charset=utf-8' });
+                        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
                         res.write(html)
                     }
                     res.end()
