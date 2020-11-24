@@ -14,13 +14,8 @@ console.log('DB server is:',db_server)
 createServer((req, res) => {
 
     const reqFields = url.parse(req.url, true).pathname.split('/').slice(1)
-    const query = url.parse(req.url, true).search || '?_page=0'
-    const queryParams = url.parse(req.url, true).query
-    queryParams._page = queryParams._page || 0
 
-    console.log(req.method)
-    console.log(req.url)
-    //console.log(req.method, reqFields, query)
+    console.log(req.method, reqFields, req.url)
 
     if (['GET', 'POST', 'PUT','DELETE','PATCH'].includes(req.method) === false) {
         handle405(res)
