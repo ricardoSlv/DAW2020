@@ -2,7 +2,9 @@ import createError from 'http-errors'
 import express, { json, urlencoded } from 'express'
 import logger from 'morgan'
 
-require('dotenv').config()
+import dotenv from 'dotenv'
+dotenv.config()
+
 import path,{ join } from 'path'
 const __dirname = path.resolve(path.dirname('')); 
 
