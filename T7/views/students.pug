@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Students List (Daw2020)
+    .w3-containter
+        table.w3-table-all
+            tr
+                th Name
+                th Number
+                th Git
+            each s in list
+                tr
+                    td= s.numero
+                    td= s.nome
+                    td= s.git
+            footer.w3-container.w3-teal
+                address Gerado por dawExpress 2020
