@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1.em4.flex-row.centerx.fitcont 
+        ion-icon.w3-text-blue.mx1(name='person-outline')
+        | Lista de alunos DAW2020
+        ion-icon.w3-text-blue.mx1(name='person-outline')
+    section.w3-containter
+        table.w3-table-all.my8
+            tr
+                th Numero
+                th Nome
+                th Tpc
+                th Git
+                th Ações
+            each s in list
+                tr(id=s.numero)
+                    td
+                        a(href='/alunos/'+s.numero) #{s.numero}
+                    td= s.nome
+                    td='['+ s.tpc +']'
+                    td
+                        a(href=s.git) #{s.git}
+                    td  
+                        a.w3-button.w3-yellow.w3-round-large.mx1(href='/alunos/editar/'+s.numero) Editar
+                        button.w3-button.w3-red.w3-round-large.mx1(onclick="deleteStudent('"+s.numero+"')") Remover
+            tr
+                td(colspan='4') 
+                    a.txtdecor-none(href='/alunos/registar')
+                        h3.w3-button.w3-round-large.w3-green.my0.flex-row.fitcont.centerx 
+                            ion-icon(name='add-outline')
+                            | Adicionar Aluno
+    script(src='/javascripts/remover.js')

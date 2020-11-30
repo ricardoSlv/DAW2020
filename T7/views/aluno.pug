@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    section.w3-containter.h100.gridpcenter
+        div.w3-card-4.w3-round-large
+            header.w3-container.w3-blue
+              h3=student.numero
+            div.w3-container
+                if student.imagem
+                    img.w3-round-large.flex-row.centerx.my8(src=student.imagem width="250" height="250")
+                else
+                    img.w3-round-large.flex-row.centerx.my8(src='https://image.flaticon.com/icons/png/512/64/64096.png' width="250" height="250")
+                p
+                    b Nome: 
+                    | #{student.nome}
+                p
+                    b Tpc: 
+                    | [#{student.tpc}]
+                p  
+                    b Git: 
+                    a(href=student.git) #{student.git}
+
+            footer.w3-container.w3-blue
+              h5 DAW 2020
+

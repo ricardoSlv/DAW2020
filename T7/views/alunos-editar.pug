@@ -1,0 +1,55 @@
+extends layout
+
+block content
+    h1.em4.flex-row.centerx.fitcont 
+        ion-icon.w3-text-blue.mx1(name='person-outline')
+        | Registo de aluno DAW2020
+        ion-icon.w3-text-blue.mx1(name='person-outline')
+    section.w3-containter
+        form.w3-containter.my8(id="edit-form" enctype="multipart/form-data")
+            
+            label.w3-text-grey(for="number") 
+                b Numero: 
+            input.w3-input.w3-border.w3-round-large.mb4(type="text" disabled required name="number" placeholder="(A/PG)00000" value=student.numero)
+            
+            label.w3-text-grey(for="name") 
+                b Nome:  
+            input.w3-input.w3-border.w3-round-large.mb4(type="text" required name="name" placeholder="Nome completo" value=student.nome)
+            
+            label.w3-text-grey(for="git") 
+                b Link Github:  
+            input.w3-input.w3-border.w3-round-large.mb4(type="text" required name="git" placeholder="https://github.com/{Perfil}/DAW2020" value=student.git)
+            
+            label.w3-text-grey(for="imagem") 
+                b Imagem:   
+            input.w3-input.w3-border.w3-round-large.mb4(type="file" id="img" name="img" accept="image/*") 
+
+            label.w3-text-grey(for="tpc")  
+                b TPC:   
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[0]>0) 
+                | 1
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[1]>0) 
+                | 2
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[2]>0) 
+                | 3
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[3]>0) 
+                | 4
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[4]>0) 
+                | 5
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[5]>0) 
+                | 6
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[6]>0) 
+                | 7
+            label 
+                input.w3-check.w3-border.w3-round-large.mx1(type="checkbox" name="tpc" checked=student.tpc[7]>0) 
+                | 8
+        button.centerx(type="submit" form="edit-form" value="Submit" class="btn btn-primary") 
+            h5.fitcont.centerx.linehg12.my0 Editar
+    script(src='/javascripts/editar.js')

@@ -24,14 +24,59 @@ section{
     margin-bottom: 0;
 }
 
+.my8{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.mb4{
+    margin-bottom: 1.2em;
+}
+
 .py1{
     padding-top:0.25em;
     padding-bottom:0.25em;
 }
 
+.linehg1{
+ line-height:1em;
+}
+
+.txtdecor-none{
+    text-decoration: none;
+}
+
+
+
+.fitcont{
+    width:fit-content;
+}
+
+.centerx{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centertxt{
+    text-align: center;
+}
+
+.em4{
+    font-size: 4em;
+}
+
+.h100{
+ height: 100%;
+}
+
 .flex-row{
     display: flex;
     align-items: center;
+}
+
+.gridpcenter{
+    display: grid;
+    place-items: center;
 }
 
 nav>a{

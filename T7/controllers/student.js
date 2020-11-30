@@ -15,6 +15,8 @@ export function lookup(id){
 
 export function insert(student){
     const newStudent = new Student(student)
+    console.log(student.imagem)
+    console.log(newStudent)
     return newStudent.save()
 }
 
@@ -23,5 +25,5 @@ export function deleteOne(number){
 }
 
 export function updateOne(number,student){
-    return Student.findOneAndUpdate({numero: number},student).exec()
+    return Student.findOneAndUpdate({numero: number},{$set: student}).exec()
 }
