@@ -18,10 +18,10 @@ export function insert(student){
     return newStudent.save()
 }
 
-export function deleteOne(studentId){
-    Student.findByIdAndDelete(studentId).exec()
+export function deleteOne(number){
+    return Student.findOneAndDelete({numero: number}).exec()
 }
 
-export function updateOne(student){
-    Student.findByIdAndUpdate(student._id,student).exec()
+export function updateOne(number,student){
+    return Student.findOneAndUpdate({numero: number},student).exec()
 }

@@ -8,12 +8,13 @@ dotenv.config()
 import path,{ join } from 'path'
 const __dirname = path.resolve(path.dirname('')); 
 
-import indexRouter from './routes/index.js'
+import studentsRouter from './routes/students.js'
 
 import mongoose from 'mongoose'
 
-const mongoDB = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@daw2020.akqj9.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`
 //const mongoDB = 'mongodb://127.0.0.1/DAW2020';
+const mongoDB = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@daw2020.akqj9.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`
+
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
 
 const app = express()
@@ -27,7 +28,7 @@ app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(express.static(join(__dirname, 'public')))
 
-app.use('/', indexRouter)
+app.use('/students', studentsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
