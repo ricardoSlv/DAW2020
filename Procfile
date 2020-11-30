@@ -1,1 +1,1 @@
-web: cd $TPC_FOLDER && node server.js 
+web: cd $TPC_FOLDER && node $MAIN_FILE 
