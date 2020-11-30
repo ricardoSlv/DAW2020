@@ -54,7 +54,10 @@ document.getElementById('edit-form').addEventListener('submit', async (e) => {
             document.location = '/alunos'
         }
         else {
-            alert("Occorreu um erro ao inserir o aluno")
+            if(resp.status===413)
+                alert("Occorreu um erro ao inserir o aluno, a imagem é demasiado grande")
+            else
+                alert("Occorreu um erro ao inserir o aluno")
         }
     }
 )

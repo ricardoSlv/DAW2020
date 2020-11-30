@@ -54,7 +54,12 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
             document.location = '/alunos'
         }
         else {
-            alert("Occorreu um erro ao inserir o aluno")
+            if(resp.status===409)
+                alert("Occorreu um erro ao inserir o aluno, o numero já está em uso")
+            if(resp.status===413)
+                alert("Occorreu um erro ao inserir o aluno, a imagem é demasiado grande")
+            else
+                alert("Occorreu um erro ao inserir o aluno")
         }
     }
 )

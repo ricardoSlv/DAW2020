@@ -13,11 +13,19 @@ export function lookup(id){
         .exec()
 }
 
-export function insert(student){
+export async function insert(student){
     const newStudent = new Student(student)
-    console.log(student.imagem)
-    console.log(newStudent)
-    return newStudent.save()
+    
+    const res = await Student.findOne({numero: newStudent.numero}).exec()
+    console.log(res)
+    if(res){
+        console.log('ola11');
+        return new Promise().reject(new Error('Duplicate'))
+    }
+    else
+        return newStudent.save()
+        
+    //return Student.findOneAndUpdate({numero: newStudent.numero}, {$setOnInsert: newStudent}, {upsert: true}).exec()
 }
 
 export function deleteOne(number){

@@ -1,13 +1,7 @@
 import { Router } from 'express'
 const router = Router()
-import multer from 'multer'
 
-const upload = multer({
-  limits: {
-    fileSize: 4 * 1024 * 1024,
-  }
-});
-
+import createError from 'http-errors'
 
 import * as Student from '../controllers/student.js'
 
@@ -35,11 +29,10 @@ router.get('/:number', (req, res, _) => {
     .catch(err=>res.render('error',{error: err}))
 });
 
-router.post('/', upload.single('imagem'), (req, res, _) => {
-  console.log(req.file)
+router.post('/', (req, res, next) => {
   Student.insert(req.body)
     .then(data=>res.send(data))
-    .catch(err=>res.render('error',{error: err}))
+    .catch(_=>next(createError(409)))
 });
 
 router.put('/:number', (req, res, _) => {
@@ -48,7 +41,7 @@ router.put('/:number', (req, res, _) => {
     .catch(err=>res.render('error',{error: err}))
 });
 
-router.delete('/:number', (req, res, _) => {
+router.delete('/:number', (req, res, next) => {
   Student.deleteOne(req.params.number)
     .then(data=>res.send(data))
     .catch(err=>res.render('error',{error: err}))
