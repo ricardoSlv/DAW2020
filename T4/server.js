@@ -44,6 +44,7 @@ function handleArq(res,id){
 function handleHome(res){
     readFile('./website/index.html', (err, data) => {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+        res.write(data)
         res.end()
     })
 }
