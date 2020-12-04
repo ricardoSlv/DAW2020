@@ -28,7 +28,7 @@ createServer((req, res) => {
                     case 'notebook.svg':
                         fs.readFile('./static/notebook.svg', (err, html) => {
                             if (err)
-                            res.writeHead(500);
+                                res.writeHead(500);
                             else {
                                 res.writeHead(200, { 'Content-Type': 'image/svg+xml;  charset=utf-8' })
                                 res.write(html)
@@ -50,7 +50,7 @@ createServer((req, res) => {
                     case 'index.js':
                         fs.readFile('./static/index.js', (err, js) => {
                             if (err)
-                            res.writeHead(500);
+                                res.writeHead(500);
                             else {
                                 res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8' })
                                 res.write(js)
@@ -67,7 +67,7 @@ createServer((req, res) => {
             case '':
                 fs.readFile("./static/index.html", (err, html) => {
                     if (err)
-                    res.writeHead(500);
+                        res.writeHead(500);
                     else {
                         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
                         res.write(html)
@@ -155,7 +155,6 @@ createServer((req, res) => {
                 console.log(body);
                 res.end('ok');
                 const updatedTask = JSON.parse(body);
-                console.log(updatedTask);
 
                 axios.put(`${db_server}/tasks/${updatedTask.id}`,
                     JSON.stringify(updatedTask), {
@@ -213,4 +212,5 @@ createServer((req, res) => {
     }
 
 }).listen(port)
+            console.log("🚀 ~ file: server.js ~ line 216 ~ createServer ~ body", body)
 
