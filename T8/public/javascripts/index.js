@@ -8,7 +8,7 @@ function showImage(name, type) {
                 <a class="w3-text-blue" href="/files/download/${name}" download rel="noopener noreferrer" target="_blank">
                     ${name}
                 </a>
-                , ${type}
+                    ${type}
             </h3> 
         </img>`)
     else

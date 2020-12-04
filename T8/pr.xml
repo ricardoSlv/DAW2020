@@ -4,8 +4,8 @@
     <meta>
         <key>DAW-TPC7-2020</key>
         <title>Criação de um servidor http para gerir dados sobre os alunos de DAW2020  </title>
-        <bdate>Novembro 2020</bdate>
-        <edate>Novembro 2020</edate>
+        <bdate>Dezembro 2020</bdate>
+        <edate>Dezembro 2020</edate>
         <supervisor url="http://www3.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
     </meta>
     <team>
@@ -15,17 +15,13 @@
         </member>
     </team>
     <abstract>
-        <p>O trabalho de casa 7 correspondia à criação um aplicação http MVC através do framework Express, templates Pug e Mongoose+Mongodb na camada de dados</p>
-        <p>A aplicação permite observar, adicionar, remover e editar dados relativamente aos alunos de DAW2020</p>
-        <p>Um aluno é constituido por um Numero, Nome, Tpcs, Link para o git e uma imagem(facultativa)</p>
-        <p>O upload de imagems é feito através da Api FileReader do WebBrowser, e é enviada no formato DataUrl dentro de um objeto Json, o que lhe põe um limite de 8MB,
-        neste caso, considero que este tamanho é suficientemente grande.</p>
-        <p>As imagems são guardadas na base de dados como strings(DataURL), verifico existem melhores alternativas, mas no caso em questão considero ser uma opção válida,
-        já que as imagens estão limitadas a 8MB pelo payload HTTP e o tamanho máximo para um documento em mongoDB é 16MB</p> 
-        <p>Antes da submissao de um de registo/edição, o numero e o link git são validados através de expressões regulares e o utilizador é informado de qual falhou</p>
-        <p>A interface informa também o utilizador no caso de a imagem ser demasiado grande ou o número já estar em uso após uma tentativa de inserção/edição falhada</p>
+        <p>O trabalho de casa 8 correspondia à criação um aplicação com a mesma tecnologia da anterior, com o objetivo de permitir fazer upload e download de ficheiros de um servidor </p>
+        <p>A aplicação permite observar os ficheiros presentes no servidor e obervar diratamente o seu conteúdo se forem imagens</p>
+        <p>É possivel também fazer download individual dos ficheiros </p>
+        <p>O upload de imagems é feito através de um form dinâmico que permite fazer upload de fazer ficheiros de uma só vez, é possivel adiconar uma breve descrição a cada ficheiro</p>
+        <p>As imagems são guardadas na pasta pública do servidor e podem ser acedidas diretamente(/fileStore/*)</p> 
     </abstract>
     <deliverables>
-        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T7/">Projeto</link>
+        <link url="https://github.com/ricardoSlv/DAW2020/blob/master/T8/">Projeto</link>
     </deliverables>
 </pr>
