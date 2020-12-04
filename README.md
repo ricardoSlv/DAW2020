@@ -26,4 +26,10 @@ Json-server usado sofre as limitações do anterior. \
 Nesta versão é visivel também que os posts/puts/patches são falsos (O json-server responde ok mas não guarda as alterações) e que este rejeita deletes. \
 O webserver funciona normalmente se for fornecido um json-server não limitado
 
+# T7
+https://daw-tpc7.herokuapp.com/ 
 
+# T8
+https://daw-tpc8.herokuapp.com/ 
+O servidor é efémero, todos os uploads são perdidos quando ocorre um restart, porem as entradas são mantidas na base de dados, algumas entradas poderão portanto apontar para ficheiros não existentes. \
+No caso de um ficheiro como o mesmo nome ser uploaded, este substituirá o anterior.
