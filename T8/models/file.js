@@ -8,4 +8,4 @@ const studentSchema = new mongoose.Schema({
     mimetype: String,
 },{versionKey: false});
 
-export default mongoose.model('student', studentSchema)
+export default mongoose.model('file', studentSchema)
