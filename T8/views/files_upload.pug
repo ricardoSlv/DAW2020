@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    section.w3-containter.h100
+    
+        h1.em4.flex-row.centerx.fitcont 
+            ion-icon.w3-text-blue.mx1(name='cloud-upload-outline')
+            | File Upload
+            ion-icon.w3-text-blue.mx1(name='cloud-upload-outline')
+
+        form.w3-container(id="form1" action="/files" method="POST" enctype="multipart/form-data")
+            div.w3-row.w3-margin-bottom
+                label.w3-col.s3.w3-text-blue
+                    b Description
+                input.w3-col.s9.w3-border.w3-input.w3-border.w3-light-grey(type="text" name="desc")
+                label.w3-col.s3.w3-text-blue
+                    b Select file
+                input.w3-col.s9.w3-border.w3-input.w3-border.w3-light-grey(type="file" multiple name="myFile")
+            input.w3-btn.w3-blue-grey.w3-margin-right(type="submit" value="Submit")
+            button.w3-button.w3-blue(type="button" onclick="addFormFileField()") Add File

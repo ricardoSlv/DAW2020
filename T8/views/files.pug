@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1.em4.flex-row.centerx.fitcont 
+        ion-icon.w3-text-blue.mx1(name='document-outline')
+        | File List
+        ion-icon.w3-text-blue.mx1(name='document-outline')
+    section.w3-containter
+        table.w3-table-all.my8
+            tr
+                th File
+                th Description
+                th Size
+                th Type
+                th Date
+            each f in files
+                tr
+                    td.w3-text-blue(onclick=`showImage("${f.name}", "${f.mimetype}")` style='cursor:pointer;') 
+                        b=f.name
+                    td  #{f.desc}
+                    td  #{f.size}
+                    td  #{f.mimetype}
+                    td  #{f.date}
+        div.w3-card-4.modal(id='display' style="width:fit-content; max-width:90%; height: 80%;")
